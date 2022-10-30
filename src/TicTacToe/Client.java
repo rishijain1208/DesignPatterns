@@ -1,7 +1,6 @@
 package TicTacToe;
 
 import TicTacToe.factories.BotDifficultyLevelFactory;
-import TicTacToe.factories.GameWinningStrategyFactory;
 import TicTacToe.factories.GameWinningStrategyNameEnumFactory;
 import TicTacToe.factories.PlayerFactory;
 import TicTacToe.models.*;

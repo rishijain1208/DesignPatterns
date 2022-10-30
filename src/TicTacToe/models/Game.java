@@ -29,32 +29,9 @@ public class Game {
         return new Builder();
     }
 
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public Board getBoard() {
-        return board;
-    }
-
-    public List<Move> getMoves() {
-        return moves;
-    }
-
-    public List<GameWinningStrategy> getGameWinningStrategies() {
-        return gameWinningStrategies;
-    }
-
-    public int getLastMovedPlayerIndex() {
-        return lastMovedPlayerIndex;
-    }
 
     public GameStatus getGameStatus() {
         return gameStatus;
-    }
-
-    public Player getWinner() {
-        return winner;
     }
 
     public void makeMove()
@@ -83,6 +60,7 @@ public class Game {
             {
                 gameStatus = GameStatus.ENDED;
                 winner = this.players.get(lastMovedPlayerIndex);
+                System.out.println("WINNER : " + winner.getName());
                 return;
             }
         }
@@ -90,6 +68,7 @@ public class Game {
         if(filledCells == (this.players.size()+1)*(this.players.size()+1))
         {
             gameStatus = GameStatus.DRAW;
+            System.out.println("GAME DRAW!!");
         }
     }
     public static class Builder{
